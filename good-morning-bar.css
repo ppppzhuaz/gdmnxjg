@@ -17,7 +17,7 @@ p {
 
 @font-face {
     font-family: fzcjljt;
-    src: url('https://nie.res.netease.com/comm/js/nie/ref/fonts/fzcjljt.woff') format('woff');
+    src: url('fzcjljt.woff') format('woff');
 }
 
 @font-face {
