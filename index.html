@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古德猫宁小酒馆</title>
+    <style>
+        @font-face {
+            font-family: fzcjljt;
+            src: url('https://nie.res.netease.com/comm/js/nie/ref/fonts/fzcjljt.woff') format('woff');
+        }
+        body {
+            font-family: fzcljjt;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="good-morning-bar.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 头部导航 -->
+    <header id="header">
+        <div class="logo-container" onclick="scrollToSection('hero')">
+            <img src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/logo.avif" alt="Logo 1"
+                class="logo">
+            <p>古德猫宁小酒馆</p>
+            <!-- <img src="images/gmb.png" alt="Logo 2" class="logo" width="150px"> -->
+        </div>
+        <div class="nav-buttons">
+            <div class="nav-btn" data-target="notice" onclick="scrollToSection('notice')">
+                <span class="default-icon"><img
+                        src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/btn01.avif"></span>
+                <span class="active-icon"><img
+                        src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/btn01-2.avif"></span>
+            </div>
+            <div class="nav-btn" data-target="activity" onclick="scrollToSection('activity')">
+                <span class="default-icon"><img
+                        src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/btn02.avif"></span>
+                <span class="active-icon"><img
+                        src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/btn02-2.avif"></span>
+            </div>
+            <div class="nav-btn" data-target="group" onclick="scrollToSection('group')">
+                <span class="default-icon"><img
+                        src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/btn03.avif"></span>
+                <span class="active-icon"><img
+                        src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/btn03-2.avif"></span>
+            </div>
+            <div class="nav-btn" data-target="member" onclick="scrollToSection('member')">
+                <span class="default-icon"><img
+                        src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/btn05.avif"></span>
+                <span class="active-icon"><img
+                        src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/btn05-2.avif"></span>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- 主内容区域 -->
+    <section class="hero" id="hero">
+        <video id="hero-video" autoplay muted loop>
+            <source src="https://yysls.v.netease.com/mp4/2025/0828/kv-4k-fish2.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>欢迎光临</h1>
+            <p>古德猫宁小酒馆</p>
+        </div>
+
+        <a href="#" class="cta-button" onclick="scrollToSection('notice')">
+            <img src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/goon.avif" width="200px">
+        </a>
+    </section>
+
+
+    <!-- 内容区域 -->
+    <section class="content-section" id="notice">
+        <div class="container">
+            <div class="notice-wrapper">
+                <div class="notice-box">
+                    <p><i class="bi bi-1-circle"></i> 每天19:30百业派对，周三五20：00一决高下，周二四20:00破军杀将，周六日20：30百业战联赛</p>
+                </div>
+                <div class="notice-box">
+                    <p><i class="bi bi-2-circle"></i>
+                        每天晚上清过低的活跃，每周日晚周活跃低于2500活跃度被清，每日百业管理查看活跃度及上次在线时间，超过14天未登陆的成员将被踢出百业。</p>
+                </div>
+                <div class="notice-box">
+                    <p><i class="bi bi-3-circle"></i> 福利：周活跃第一奖励一张月卡，百业战在每场参与成员里抽取一位赠送月卡</p>
+                </div>
+                <div class="notice-box">
+                    <p><i class="bi bi-4-circle"></i> 可找大绵审核活跃度发管理。</p>
+                </div>
+                <div class="notice-box">
+                    <p><i class="bi bi-5-circle"></i> 活动开始前在群里会有通知，积极参与。</p>
+                </div>
+                <div class="notice-box">
+                    <p><i class="bi bi-6-circle"></i> 有情况提前请假告知群管理！</p>
+                </div>
+                <div class="notice-box">
+                    <p><i class="bi bi-7-circle"></i> 新人进百业需要考核一周活跃度，达标百业要求活跃后即可转为社众。如已达标却未成为社众的成员联系管理即可。</p>
+                </div>
+                <div class="notice-box">
+                    <p><i class="bi bi-8-circle"></i> 群内不定时会随机掉落奇遇~</p>
+                </div>
+                <div class="notice-box notice-final">
+                    <h3>最后希望每位少东家在百业玩的开心！</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content-section" id="activity">
+        <div class="container">
+            <div class="activity-wrapper">
+                <!-- 活动轮播 -->
+                <div class="carousel-container">
+                    <div class="carousel-slides">
+                        <div class="carousel-slide">
+                            <img src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/bypd.avif">
+                            <div class="slide-content">
+                                <h3 class="slide-title">百业派对</h3>
+                                <p class="slide-description">独乐乐不如众乐乐，群友齐聚，不亦乐乎？</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/yjgx.avif">
+                            <div class="slide-content">
+                                <h3 class="slide-title">一决高下</h3>
+                                <p class="slide-description">百业内，谁是真正的高手，擂台上见真章！</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/pjsj.avif">
+                            <div class="slide-content">
+                                <h3 class="slide-title">破军杀将</h3>
+                                <p class="slide-description">百业内部，谁是挑战好手，破军杀将便知！</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/byz.avif">
+                            <div class="slide-content">
+                                <h3 class="slide-title">百业战</h3>
+                                <p class="slide-description">真实的商战：釜底抽薪，偷走发财树！</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <span class="indicator active" data-index="0"></span>
+                        <span class="indicator" data-index="1"></span>
+                        <span class="indicator" data-index="2"></span>
+                        <span class="indicator" data-index="3"></span>
+                    </div>
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+
+                <!-- 活动日程 -->
+                <div class="schedule">
+                    <div class="schedule-nav">
+                        <div class="schedule-days">
+                            <div class="day active" data-day="monday">周一</div>
+                            <div class="day" data-day="tuesday">周二</div>
+                            <div class="day" data-day="wednesday">周三</div>
+                            <div class="day" data-day="thursday">周四</div>
+                            <div class="day" data-day="friday">周五</div>
+                            <div class="day" data-day="saturday">周六</div>
+                            <div class="day" data-day="sunday">周日</div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-content">
+                        <!-- 周一内容 -->
+                        <div class="day-content active" data-day="monday">
+                            <div class="content-box">
+                                <h3>百业派对 <i class="fa-regular fa-clock"></i> 19:30</h3>
+                                <p class="duration">持续十分钟</p>
+                                <p>百业活动点击前往 或 返回百业驻地自行前往</p>
+                            </div>
+                            <div class="content-box">
+                                <h3>双十列车 <i class="fa-regular fa-clock"></i> 派对结束后</h3>
+                                <p>派对期间留意百业群消息及游戏内百业频道消息申请入队即可</p>
+                            </div>
+                        </div>
+
+                        <!-- 周二内容 -->
+                        <div class="day-content" data-day="tuesday">
+                            <div class="content-box">
+                                <h3>百业派对 <i class="fa-regular fa-clock"></i> 19:30</h3>
+                                <p class="duration">持续十分钟</p>
+                                <p>百业活动点击前往 或 返回百业驻地自行前往</p>
+                            </div>
+                            <div class="content-box">
+                                <h3>破军杀将 <i class="fa-regular fa-clock"></i> 20:00</h3>
+                                <p class="duration">持续两小时</p>
+                                <p>百业活动点击前往</p>
+                            </div>
+                        </div>
+
+                        <!-- 周三内容 -->
+                        <div class="day-content" data-day="wednesday">
+                            <div class="content-box">
+                                <h3>百业派对 <i class="fa-regular fa-clock"></i> 19:30</h3>
+                                <p class="duration">持续十分钟</p>
+                                <p>百业活动点击前往 或 返回百业驻地自行前往</p>
+                            </div>
+                            <div class="content-box">
+                                <h3>一决高下 <i class="fa-regular fa-clock"></i> 20:00</h3>
+                                <p class="duration">持续一小时</p>
+                                <p>百业活动点击前往 或 返回百业驻地自行前往</p>
+                            </div>
+                        </div>
+
+                        <!-- 周四内容 -->
+                        <div class="day-content" data-day="thursday">
+                            <div class="content-box">
+                                <h3>百业派对 <i class="fa-regular fa-clock"></i> 19:30</h3>
+                                <p class="duration">持续十分钟</p>
+                                <p>百业活动点击前往 或 返回百业驻地自行前往</p>
+                            </div>
+                            <div class="content-box">
+                                <h3>破军杀将 <i class="fa-regular fa-clock"></i> 20:00</h3>
+                                <p class="duration">持续两小时</p>
+                                <p>百业活动点击前往</p>
+                            </div>
+                        </div>
+
+                        <!-- 周五内容 -->
+                        <div class="day-content" data-day="friday">
+                            <div class="content-box">
+                                <h3>百业派对 <i class="fa-regular fa-clock"></i> 19:30</h3>
+                                <p class="duration">持续十分钟</p>
+                                <p>百业活动点击前往 或 返回百业驻地自行前往</p>
+                            </div>
+                            <div class="content-box">
+                                <h3>一决高下 <i class="fa-regular fa-clock"></i> 20:00</h3>
+                                <p class="duration">持续一小时</p>
+                                <p>百业活动点击前往 或 返回百业驻地自行前往</p>
+                            </div>
+                        </div>
+
+                        <!-- 周六内容 -->
+                        <div class="day-content" data-day="saturday">
+                            <div class="content-box">
+                                <h3>百业派对 <i class="fa-regular fa-clock"></i> 19:30</h3>
+                                <p class="duration">持续十分钟</p>
+                                <p>百业活动点击前往 或 返回百业驻地自行前往</p>
+                            </div>
+                            <div class="content-box">
+                                <h3>百业战 <i class="fa-regular fa-clock"></i> 20:00</h3>
+                                <p class="duration">目前每日一场</p>
+                                <p>百业首页右上角点击前往 或 游戏内弹窗确认前往</p>
+                            </div>
+                        </div>
+
+                        <!-- 周日内容 -->
+                        <div class="day-content" data-day="sunday">
+                            <div class="content-box">
+                                <h3>百业派对 <i class="fa-regular fa-clock"></i> 19:30</h3>
+                                <p class="duration">持续十分钟</p>
+                                <p>百业活动点击前往 或 返回百业驻地自行前往</p>
+                            </div>
+                            <div class="content-box">
+                                <h3>百业战 <i class="fa-regular fa-clock"></i> 20:00</h3>
+                                <p class="duration">目前每日一场</p>
+                                <p>百业首页右上角点击前往 或 游戏内弹窗确认前往</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content-section" id="group">
+        <div class="container">
+
+            <!-- 大图展示 + 两侧按钮 -->
+            <div class="gallery-display">
+                <button class="gallery-btn prev" aria-label="上一张">&#10094;</button>
+                <div id="main-display-wrap" class="main-display-wrap">
+                    <img id="main-display" class="main-media"
+                        src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/group/1.avif" alt="展示图">
+                </div>
+                <button class="gallery-btn next" aria-label="下一张">&#10095;</button>
+            </div>
+
+            <!-- 缩略图滑动 -->
+            <div class="gallery-thumbnails" role="list">
+                <div class="thumb active" role="listitem">
+                    <img src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/group/1.avif"
+                        data-full="https://gitee.com/pppaw/good-morning-bar/raw/master/images/group/1.avif">
+                </div>
+                <div class="thumb active" role="listitem">
+                    <img src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/group/2.avif"
+                        data-full="https://gitee.com/pppaw/good-morning-bar/raw/master/images/group/2.avif">
+                </div>
+                <!--<div class="thumb active" role="listitem">
+                    <img src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/group/1.png" 
+                        data-full="https://gitee.com/pppaw/good-morning-bar/raw/master/images/group/1.png">
+                </div>
+                <div class="thumb active" role="listitem">
+                    <img src="https://gitee.com/pppaw/good-morning-bar/raw/master/images/group/2.png" 
+                        data-full="https://gitee.com/pppaw/good-morning-bar/raw/master/images/group/2.png">
+                </div>
+                
+                 <div class="thumb" role="listitem">
+                    <video data-full="https://gitee.com/pppaw/good-morning-bar/raw/master/videos/sample1.mp4" muted>
+                        <source src="https://gitee.com/pppaw/good-morning-bar/raw/master/videos/sample1.mp4"
+                            type="video/mp4">
+                    </video>
+                </div> -->
+
+                <!-- 模态弹窗 -->
+                <div id="lightbox" class="lightbox" style="display:none;"">
+                <span class=" lightbox-close">&times;</span>
+                    <img class="lightbox-content" id="lightbox-img" src="">
+                </div>
+            </div>
+    </section>
+
+
+    <section class="content-section" id="member">
+        <div class="member-container">
+            <!-- 左侧列表 -->
+            <div class="member-left">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="management">管理</button>
+                    <button class="tab-btn" data-tab="staff">社员</button>
+                </div>
+                <div class="member-list-wrapper">
+                    <div class="member-list" id="memberList"></div>
+                </div>
+            </div>
+
+            <!-- 右侧展示 -->
+            <div class="member-right">
+                <div class="detail-container">
+                    <img class="detail-bg" src="">
+                    <div class="detail-overlay">
+                        <div class="title">
+                            <span class="name"></span>
+                            <span class="position"></span>
+                        </div>
+                        <div class="impressions"></div>
+                        <div class="school"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <button id="back-to-top" title="回到顶部">↑</button>
+
+    <footer>
+        <p>&copy; 2025 燕云十六声 · 古德猫宁小酒馆</p>
+        <p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+    </footer>
+
+    <script src="good-morning-bar.js"></script>
+    <script src="member.js"></script>
+</body>
+
+</html>

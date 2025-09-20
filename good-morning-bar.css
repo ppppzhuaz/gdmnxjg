@@ -1,0 +1,1043 @@
+/* ========== 1. 全局与字体 ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    color: #fff;
+}
+
+p {
+    margin: 0;
+}
+
+@font-face {
+    font-family: fzcjljt;
+    src: url('https://nie.res.netease.com/comm/js/nie/ref/fonts/fzcjljt.woff') format('woff');
+}
+
+@font-face {
+    font-family: fzxjljt;
+    src: url(https://nie.res.netease.com/comm/js/nie/ref/fonts/fzxjljt.woff) format('woff');
+}
+
+@font-face {
+    font-family: fzssksjt;
+    src: url(https://nie.res.netease.com/comm/js/nie/ref/fonts/fzssksjt.woff) format('woff');
+}
+
+/* ========== 2. 背景与布局 ========== */
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* ========== 3. Header ========== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+header.scrolled {
+    background: url('https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/footer.avif');
+    padding: 15px 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+    font-size: 1.3rem;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    height: 45px;
+    margin-right: 20px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-btn img {
+    width: 130px;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+}
+
+.nav-btn.active {
+    transform: scale(1.0);
+}
+
+.nav-btn .default-icon,
+.nav-btn .active-icon {
+    position: absolute;
+    font-size: 18px;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.nav-btn .active-icon {
+    opacity: 0;
+}
+
+.nav-btn.active .default-icon {
+    opacity: 0;
+}
+
+.nav-btn.active .active-icon {
+    opacity: 1;
+}
+
+/* ========== 4. Hero 区域 ========== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    bottom: 100px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.cta-button i {
+    margin-left: 10px;
+}
+
+/* ========== 5. Section 通用 ========== */
+.content-section {
+    padding: 50px;
+    height: 100vh;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/* ========== 6. Notice 公告 ========== */
+/* 公告部分 */
+
+#notice {
+    background: url('https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/bg-1.avif') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    padding: 120px 0;
+    /* 上下留空 */
+}
+
+.notice-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* 间距 */
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.notice-box {
+    background: rgba(255, 255, 255, 0.5);
+    /* 白色半透明 */
+    margin-left: 12vw;
+    padding: 15px 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.notice-box:hover {
+    transform: translateX(-8px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.notice-box p {
+    margin: 0;
+    line-height: 1.4;
+    color: black;
+    font-family: fzcjljt;
+}
+
+.notice-box i {
+    margin-right: 6px;
+}
+
+/* 最后一条完全透明，没有背景和框 */
+.notice-final {
+    background: none !important;
+    box-shadow: none !important;
+    transform: scale(1.1);
+    text-align: center;
+    color: black;
+}
+
+.notice-final h3 {
+    font-family: fzcjljt;
+}
+
+
+/* ========== 7. Activity（轮播 + 日程） ========== */
+#activity {
+    background: url('https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/bg-2.avif') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    padding: 120px 0;
+    /* 上下留空 */
+}
+
+.activity-wrapper {
+    display: block;
+}
+
+/* 上下排布 */
+
+/* 轮播 */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto auto 30px;
+    height: 35vh;
+}
+
+.carousel-slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 30px;
+    color: white;
+}
+
+.slide-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-family: fzcjljt;
+}
+
+.slide-description {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    justify-content: flex-end;
+    /* 保证内容靠右 */
+}
+
+.indicator {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* 轮播切换按钮 */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    /* 去掉边框 */
+    background: none;
+    /* 去掉背景 */
+    color: white;
+    /* 箭头颜色 */
+    font-size: 2rem;
+    /* 箭头大小 */
+    cursor: pointer;
+    /* 鼠标变小手 */
+    z-index: 20;
+}
+
+/* 鼠标悬停时只改变颜色，不加背景 */
+.carousel-btn:hover {
+    color: black;
+    /* 悬停时换颜色，比如黄色 */
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+
+/* 日程 */
+.schedule {
+    width: 100%;
+}
+
+.schedule-nav {
+    width: 100%;
+    max-width: 1200px;
+    /* 与轮播图 max-width 一致 */
+    margin: 40px auto 20px;
+    /* 居中 */
+    padding: 0 20px;
+    /* 左右内边距和轮播一致 */
+    text-align: center;
+    /* 内容整体居中 */
+}
+
+.schedule-days {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* 居中周一到周日 */
+}
+
+.day {
+    padding: 9px 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-family: fzcjljt;
+}
+
+.day:hover {
+    transform: translateY(-2px);
+}
+
+.day.active {
+    color: black;
+    background: url('https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/btn-bg.avif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.schedule-content {
+    width: 100%;
+    max-width: 1200px;
+    /* 与轮播图一致 */
+    margin: 0 auto;
+    /* 居中 */
+}
+
+.day-content {
+    display: none;
+    gap: 40px;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.day-content.active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* 单个靠左，两个自然分散 */
+}
+
+.content-box {
+    height: 26vh;
+    flex: 0 1 48%;
+    /* 两个时正好分散 */
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    /* 底部间距 */
+}
+
+.content-box:hover {
+    background: linear-gradient(to right, rgba(229, 230, 239, 0.1), transparent);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.content-box h3 {
+    color: #e5e6ef;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-family: fzcjljt;
+}
+
+.duration {
+    display: inline-block;
+    /* 让边框刚好包住文字 */
+    padding: 2px 8px;
+    /* 内边距 */
+    border: 1px solid #fff;
+    /* 白色边框，可改颜色 */
+    border-radius: 6px;
+    /* 圆角 */
+    color: #fff;
+    /* 字体颜色 */
+}
+
+
+.content-box p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* ========== 8. 图文介绍 ========== */
+.image-container img {
+    width: 100%;
+    margin-top: 40px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.03);
+}
+
+.text-container {
+    margin: 80px 20px 20px 60px;
+    background: url('https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/border.avif') rgba(0, 0, 0, 0.1) no-repeat center center;
+    background-size: cover;
+    padding: 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.text-container:hover {
+    transform: scale(1.03);
+}
+
+.text-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.text-content p {
+    margin-bottom: 20px;
+}
+
+
+
+#group {
+    background: url('https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/bg-4.avif') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    padding: 120px 0;
+    /* 上下留空 */
+}
+
+/* 整体展示区：横向布局，按钮在两侧 */
+.gallery-display {
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    gap: 40px;
+}
+
+/* 大图容器：固定尺寸，黑色半透明背景 */
+.main-display-wrap {
+    width: 800px;
+    /* 固定宽度，可调 */
+    height: 400px;
+    /* 固定高度，可调 */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* 图片/视频：保持比例完整展示，尽可能大 */
+.main-media {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* 保持比例，不裁剪 */
+    display: block;
+    border-radius: 5px;
+}
+
+
+/* 左右按钮：现在在两侧，不覆盖图像 */
+.gallery-btn {
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 3.0rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.gallery-btn:hover {
+    color: black;
+    transform: scale(1.1);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* 缩略图区整体容器 */
+.gallery-thumbnails {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 8px 6px;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 70vw;
+    /* 🔹 限制缩略图条的整体宽度，自己调 60%/70%/500px 等 */
+    margin: 50px auto 0;
+    /* 🔹 居中显示 */
+}
+
+/* 单个缩略图 */
+.thumb {
+    background: black;
+    width: 120px;
+    height: 78px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 0 0 auto;
+    transition: transform 0.25s ease, border 0.25s ease;
+}
+
+/* 缩略图里的图片或视频 */
+.thumb img,
+.thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* 悬停效果：放大一点 */
+.thumb:hover {
+    transform: scale(1.08);
+}
+
+
+/* 被选中的缩略图：亮度恢复 + 加外边框 */
+.thumb.active img,
+.thumb.active video {
+    filter: brightness(100%);
+}
+
+.thumb.active {
+    border: 2px solid #fff;
+    /* 🔹 你可以改成 #007bff 之类的主题色 */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* 🔹 让选中更突出，可选 */
+}
+
+/* Lightbox 模态样式 */
+.lightbox {
+    display: none;
+    /* 默认隐藏 */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+
+/* ========== 9. Features ========== */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: #3b82f6;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* ========== 10. Footer ========== */
+footer {
+    background: url('https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/footer.avif') no-repeat center center;
+    background-size: cover;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    /* 行间距，数字表示倍数 */
+}
+
+#back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+    /* 默认隐藏 */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#back-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(-3px);
+}
+
+#member {
+    background: url('https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/bg-3.avif') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    padding: 120px 0;
+    /* 上下留空 */
+}
+
+.member-container {
+    display: flex;
+    gap: 20px;
+    /* 左右间距 */
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 500px;
+    /* 固定高度 */
+}
+
+.member-left {
+    flex: 0 0 250px;
+    background: rgba(255, 255, 255, 0.2);
+    /* 半透明背景 */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 75vh;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 6px 0;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: none;
+    transition: background 0.3s;
+    font-family: fzcjljt;
+}
+
+.tab-btn:hover {
+    transform: scale(1.05);
+}
+
+.tab-btn.active {
+    background: url(https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/btn-bg.avif);
+    background-size: contain;
+    color: black;
+}
+
+.member-list-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    /* 滚轮滚动 */
+}
+
+.member-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* 每行多个头像 */
+    gap: 5px;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.member-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    border-radius: 2px;
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    font-family: fzcjljt;
+    /* 设置字体 */
+    font-size: 12px;
+    /* 设置大小 */
+}
+
+.member-item div {
+    height: 30px;
+    /* 固定文字高度，可根据需求调整 */
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+    overflow: hidden;
+    /* 超出文字隐藏 */
+    text-align: center;
+    line-height: 1;
+    /* 避免默认行高干扰居中 */
+}
+
+/* 悬停效果 */
+.member-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 点击选中效果 */
+.member-item.active {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    color: black;
+}
+
+.member-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-bottom: 4px;
+}
+
+/* 右侧展示 */
+.member-right {
+    flex: 1;
+}
+
+.detail-container {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    /* 高度和左侧一致 */
+    overflow: hidden;
+}
+
+.detail-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-container {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    cursor: pointer;
+    /* 鼠标悬停显示 */
+}
+
+.detail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+
+    /* 初始隐藏文字 */
+    opacity: 0;
+    pointer-events: none;
+    /* 不影响鼠标事件 */
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    /* 高于遮罩 */
+}
+
+/* 悬停 detail-container 时显示文字 */
+.detail-container:hover .detail-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 背景变暗的遮罩 */
+.detail-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* 半透明黑色 */
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    /* 避免遮挡鼠标事件 */
+}
+
+/* 悬停时显示遮罩 */
+.detail-container:hover::after {
+    opacity: 1;
+}
+
+/* 名字 */
+.detail-overlay .title {
+    display: flex;
+    gap: 10px;
+    /* 名字和职位之间的间距 */
+}
+
+.detail-overlay .name {
+    font-size: 3.0rem;
+    font-family: fzcjljt;
+    margin: 0;
+    line-height: 1;
+}
+
+.detail-overlay .position {
+    display: inline-block;
+    /* 保证宽高生效 */
+    width: 120px;
+    /* 框宽度，可调 */
+    height: 60px;
+    /* 框高度，可调 */
+    line-height: 60px;
+    /* 垂直居中文字 */
+    font-size: 1.4rem;
+    /* 文字大小 */
+    font-weight: normal;
+    background: url('https://gitee.com/pppaw/good-morning-bar/raw/master/images/sys/pos.avif') no-repeat center center;
+    background-size: contain;
+    /* 背景图等比例铺满 */
+    color: white;
+    margin-left: 10px;
+    font-family: fzcjljt;
+    text-align: center;
+    /* 文字水平居中 */
+    padding: 0 5px;
+    /* 可调左右内边距 */
+}
+
+/* 印象部分 */
+.detail-overlay .impressions {
+    display: inline-block;
+    font-family: fzcjljt;
+    padding: 3px 8px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    border-radius: 12px;
+    font-size: 1.6rem;
+}
+
+/* 武学流派 */
+.detail-overlay .school span {
+    display: inline-block;
+    padding: 6px 10px;
+    /* 内边距加大，让框更大 */
+    margin-right: 15px;
+    /* 右边间距 */
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 1.3rem;
+    /* 字体缩小 */
+    transform: translateX(10px);
+    /* 整体往右移动 */
+    font-weight: 500;
+    font-family: fzcjljt;
+}
